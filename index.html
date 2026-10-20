@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobalystic’s Management</title>
+<meta name="description" content="Staff, community and event management for Minecraft servers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f4f3; --surface:#ffffff; --ink:#16231f; --muted:#55645e;
+  --line:#d5dcd9; --accent:#1f6b55; --accent-ink:#ffffff; --warm:#b5762a;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#101815; --surface:#17221e; --ink:#e8efeb; --muted:#9db0a8; --line:#2a3a34; --accent:#5cc7a0; --accent-ink:#0c1512; --warm:#e0a255;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;letter-spacing:-.02em}
+
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem;gap:1rem;flex-wrap:wrap}
+.brand{font:700 1.1rem var(--display);text-decoration:none}
+nav{display:flex;gap:1.5rem;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+
+.hero{padding:5.5rem 0 4rem}
+.hero h1{font-size:clamp(2.75rem,8vw,5.75rem);font-weight:800;max-width:14ch}
+.hero p{max-width:34rem;margin:1.5rem 0 2rem;font-size:1.2rem;color:var(--muted)}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:.5rem;font-weight:600;text-decoration:none;border:1.5px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.ghost{margin-left:.5rem;color:var(--accent)}
+.btn.ghost:hover{background:var(--surface)}
+
+section{padding:4rem 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:2rem}
+
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
+.values h3{font-size:1.35rem;margin-bottom:.5rem}
+.values p{margin:0;color:var(--muted)}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem}
+.services div{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:.5rem;padding:1.5rem;font:700 1.35rem var(--display)}
+
+.ledger{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.ledger li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.ledger .name{font:700 1.4rem var(--display)}
+.ledger .size{font:800 1.4rem var(--display);color:var(--accent);white-space:nowrap}
+.ledger li.big .size{color:var(--warm)}
+.also{margin-top:2rem;color:var(--muted)}
+.also strong{color:var(--ink);font-weight:600}
+
+.vouches{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.5rem}
+blockquote{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:1.5rem}
+blockquote p{margin:0 0 1rem}
+blockquote footer{color:var(--muted);font-size:.9rem}
+
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.contact a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:1.25rem 1.5rem;text-decoration:none}
+.contact a:hover{border-color:var(--accent)}
+.contact small{display:block;color:var(--muted);font-size:.85rem}
+.contact span{font-weight:600;word-break:break-all}
+
+footer.site{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.9rem}
+@media (max-width:30rem){.btn.ghost{margin:.75rem 0 0}.ledger .name,.ledger .size{font-size:1.15rem}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Mobalystic’s Management</a>
+    <nav aria-label="Main">
+      <a href="#values">Values</a>
+      <a href="#services">Services</a>
+      <a href="#experience">Experience</a>
+      <a href="#vouches">Vouches</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero wrap">
+    <h1>Management services for Minecraft communities.</h1>
+    <p>Staff, community and event management for servers of every size, from small networks to communities with hundreds of peak players.</p>
+    <a class="btn primary" href="#contact">Get in touch</a>
+    <a class="btn ghost" href="#experience">See experience</a>
+  </div>
+
+  <section id="values"><div class="wrap">
+    <h2>Core values</h2>
+    <div class="values">
+      <div><h3>Teamwork</h3><p>I believe in working together with trust and respect, valuing each person’s strengths to achieve shared goals.</p></div>
+      <div><h3>Communication</h3><p>I value clear, honest, and respectful communication that promotes understanding, collaboration, and accountability.</p></div>
+      <div><h3>Work ethic</h3><p>I am committed to integrity, responsibility, and consistent effort, taking pride in doing our best work every day.</p></div>
+    </div>
+  </div></section>
+
+  <section id="services"><div class="wrap">
+    <h2>Services</h2>
+    <div class="services">
+      <div>Staff management</div>
+      <div>Community management</div>
+      <div>Event management</div>
+    </div>
+  </div></section>
+
+  <section id="experience"><div class="wrap">
+    <h2>Managerial experience</h2>
+    <ul class="ledger">
+      <li class="big"><span class="name">ZedarMC</span><span class="size">800+ PB</span></li>
+      <li><span class="name">MineGlobe</span><span class="size">400+ PB</span></li>
+      <li><span class="name">Feather Client</span><span class="size">80K+ PB</span></li>
+      <li><span class="name">MineHeart</span><span class="size">300+ PB</span></li>
+      <li><span class="name">JackpotMC</span><span class="size">300+ PB</span></li>
+      <li><span class="name">CobbleMC</span><span class="size">200+ PB</span></li>
+      <li><span class="name">Convicted</span><span class="size">200+ PB</span></li>
+    </ul>
+    <p class="also"><strong>Also worked with:</strong> FactionsLab, Covfefe Network, ElicapseMC, AzaleaMC, Grima LLC, Dylan_, VeroxusMC</p>
+  </div></section>
+
+  <section id="vouches"><div class="wrap">
+    <h2>Vouches</h2>
+    <div class="vouches">
+      <blockquote>
+        <p>Mobalystic demonstrates a complete understanding of their position and handles all staff applicants. Of course, Mobalystic always discusses all staff applications before accepting them. They have gone above and beyond in their position on the staff team, and they make all new staff members feel welcomed in the staff community and the player community. I recommend their services.</p>
+      </blockquote>
+      <blockquote>
+        <p>Mobalystic was able to present quick learning abilities, teamwork, and flexibility, amongst many other things. He continued to support the server in his time there by creating fun events, which included engaging the player base with the staff and being responsible for building events such as parkour. I recommend Mobalystic to be a part of your staff team.</p>
+      </blockquote>
+      <blockquote>
+        <p>Helps me run Dylan_’s community Discord and is very active. Great pickup for my team.</p>
+        <footer>Dylan_</footer>
+      </blockquote>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <h2>Ready to work?</h2>
+    <div class="contact">
+      <a href="https://discord.com/users/1393164690124701728"><small>Discord</small><span>Message on Discord</span></a>
+      <a href="mailto:Mobalystic@gmail.com"><small>Email</small><span>Mobalystic@gmail.com</span></a>
+    </div>
+  </div></section>
+</main>
+
+<footer class="site"><div class="wrap">© 2026 Mobalystic’s Management. Last updated 2/3/2026.</div></footer>
+
+</body>
+</html>
